@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mariela Pichardo 裴婉然 · Global History</title>
+  <meta name="description" content="Mariela Pichardo (裴婉然), historian of 20th-century Sino-Latin American relations.">
+  <style>
+    /* Palette drawn from 1960s Chinese revolutionary posters:
+       vermilion red, sun yellow, aged paper, ink black. */
+    :root {
+      --red: #c8161d;
+      --red-light: #db2a1f;
+      --red-deep: #8f0e12;
+      --yellow: #ffd23f;
+      --paper: #f3e3c3;
+      --paper-edge: #e6cfa2;
+      --ink: #1c1410;
+      --muted: #6e4f3a;
+      --bg: var(--paper);
+      --text: var(--ink);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #22100c;
+        --text: #f3e3c3;
+        --muted: #c9a982;
+        --paper-edge: #4a2318;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+    }
+
+    /* Sunburst banner */
+    header {
+      position: relative;
+      overflow: hidden;
+      background:
+        repeating-conic-gradient(from 0deg at 50% 115%,
+          var(--red) 0deg 6deg, var(--red-light) 6deg 12deg);
+      color: var(--yellow);
+      text-align: center;
+      padding: 4.5rem 1rem 5rem;
+      border-bottom: 10px solid var(--yellow);
+    }
+    header::after {
+      /* rising sun */
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -9rem;
+      width: 16rem;
+      height: 16rem;
+      margin-left: -8rem;
+      border-radius: 50%;
+      background: var(--yellow);
+      box-shadow: 0 0 0 1.2rem rgba(255, 210, 63, 0.35);
+    }
+    .star {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      margin: 0 auto 1rem;
+    }
+    .field {
+      margin: 0 0 0.25rem;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--paper);
+    }
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-family: "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.6rem, 11vw, 5rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      text-shadow: 4px 4px 0 var(--red-deep);
+    }
+    .zh-name {
+      position: relative;
+      z-index: 1;
+      margin: 0.75rem 0 0;
+      font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 9vw, 3rem);
+      letter-spacing: 0.3em;
+      padding-left: 0.3em; /* balance the trailing letter-spacing */
+      color: var(--yellow);
+      text-shadow: 3px 3px 0 var(--red-deep);
+    }
+
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 3rem 1rem 2rem;
+    }
+    section + section { margin-top: 3rem; }
+    h2 {
+      display: inline-block;
+      margin: 0 0 1.25rem;
+      padding: 0.35rem 1rem;
+      background: var(--red);
+      color: var(--yellow);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+    @media (prefers-color-scheme: dark) {
+      h2 { box-shadow: 4px 4px 0 var(--yellow); }
+    }
+    p { margin: 0 0 1rem; font-size: 1.15rem; }
+
+    figure {
+      margin: 0 0 2.5rem;
+      padding: 0.75rem;
+      background: var(--paper-edge);
+      border-top: 6px solid var(--red);
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      margin: 0 auto;
+      border: 3px solid var(--ink);
+    }
+    figcaption {
+      margin-top: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .credit {
+      display: block;
+      margin-top: 0.25rem;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    a { color: var(--red); font-weight: 600; }
+    @media (prefers-color-scheme: dark) {
+      a { color: var(--yellow); }
+    }
+
+    footer {
+      background: var(--red);
+      border-top: 6px solid var(--yellow);
+      color: var(--paper);
+      text-align: center;
+      padding: 1.25rem 1rem;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <svg class="star" viewBox="0 0 100 100" aria-hidden="true">
+      <polygon fill="#ffd23f" points="50,4 61,38 97,38 68,59 79,94 50,72 21,94 32,59 3,38 39,38"/>
+    </svg>
+    <p class="field">Global History</p>
+    <h1>Mariela Pichardo</h1>
+    <p class="zh-name" lang="zh-Hans">裴婉然</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Research</h2>
+      <p>I study twentieth-century relations between China and Latin America.</p>
+      <p>My work pushes beyond diplomatic history to bring to light the clandestine encounters and collaborations that connected the two regions, and the neglected legacies they left behind.</p>
+    </section>
+
+    <section>
+      <h2>From the archive</h2>
+      <figure>
+        <img src="images/e3-699.jpg" width="480" height="328"
+             alt="Chinese poster in English, titled Imperialists, get out of Asia, Africa and Latin America!, with photographs of demonstrations in Cuba and Beijing.">
+        <figcaption>
+          “Imperialists, get out of Asia, Africa and Latin America!” Poster for the International Day against Colonialism, published by the All-China Youth Federation and the All-China Students’ Federation, 1960.
+          <span class="credit">BG E3/699 (<a href="https://chineseposters.net/posters/e3-699">chineseposters.net</a>, IISH collection)</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="images/e3-702.jpg" width="480" height="343"
+             alt="Chinese poster in English, titled Chinese People and Youth Hail the Great Victories of the National Liberation Movement!, with photographs of events in Cuba and a rally in Beijing.">
+        <figcaption>
+          “Chinese People and Youth Hail the Great Victories of the National Liberation Movement!” Poster for the International Day against Colonialism, published by the All-China Youth Federation and the All-China Students’ Federation, 1962.
+          <span class="credit">BG E3/702 (<a href="https://chineseposters.net/posters/e3-702">chineseposters.net</a>, IISH collection)</span>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>© 2026 Mariela Pichardo · 裴婉然</footer>
+</body>
+</html>
